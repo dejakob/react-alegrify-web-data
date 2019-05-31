@@ -1,0 +1,29 @@
+{
+  "name": "alegrify-web-data",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "NODE_ENV=production babel src -d lib",
+    "watch": "NODE_ENV=production babel --watch src -d lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "jest": "^24.8.0",
+    "webpack": "^4.32.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  }
+}

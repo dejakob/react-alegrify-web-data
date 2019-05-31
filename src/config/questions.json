@@ -1,0 +1,87 @@
+[
+    {
+        "id": "occupation",
+        "answers": [
+            { "id": "occupation__work" },
+            { "id": "occupation__work-pretend" },
+            { "id": "occupation__no-work" },
+            { "id": "occupation__student" },
+            { "id": "occupation__student-pretend" },
+            { "id": "occupation__sleep" },
+            { "id": "occupation__balance" },
+            { "id": "occupation__young" }
+        ]
+    },
+    {
+        "id": "sports",
+        "answers": [
+            { "id": "sports__soccer"  },
+            { "id": "sports__rugby"  },
+            { "id": "sports__skating"  },
+            { "id": "sports__swimming"  },
+            { "id": "sports__running"  },
+            { "id": "sports__biking"  },
+            { "id": "sports__other"  },
+            { "id": "sports__none"  }
+        ]
+    },
+    {
+        "id": "problem_solving",
+        "answers": [
+            { "id": "problem_solving_none"  },
+            { "id": "problem_solving_rarely"  },
+            { "id": "problem_solving_sometimes"  },
+            { "id": "problem_solving_many"  },
+            { "id": "problem_solving_perfect"  }
+        ]
+    },
+    {
+        "id": "work_statisfaction",
+        "requirements": {
+            "occupation": { "oneOf": [ "occupation__work", "occupation__work-pretend" ] }
+        },
+        "answers": [
+            { "id": "work_statisfaction__dream"  },
+            { "id": "work_statisfaction__great"  },
+            { "id": "work_statisfaction__nice"  },
+            { "id": "work_statisfaction__neutral"  },
+            { "id": "work_statisfaction__bad"  },
+            { "id": "work_statisfaction__evil"  },
+            { "id": "work_statisfaction__none"  }
+        ]
+    },
+    {
+        "id": "bad_work_reason",
+        "requirements": {
+            "work_statisfaction": { "oneOf": ["work_statisfaction__bad", "work_statisfaction__evil", "work_statisfaction__none"] }
+        },
+        "answers": [
+            { "id": "bad_work_reason_underappreciation"  },
+            { "id": "bad_work_reason_wage"  },
+            { "id": "bad_work_reason_bully"  },
+            { "id": "bad_work_reason_harasment"  },
+            { "id": "bad_work_reason_misfit"  },
+            { "id": "bad_work_reason_ethics"  },
+            { "id": "bad_work_reason_feelings"  },
+            { "id": "bad_work_reason_other"  }
+        ]
+    },
+    {
+        "id": "going_out",
+        "requirements": {
+            "sports": { "oneOf" : [
+                "sports__skating",
+                "sports__swimming",
+                "sports__running",
+                "sports__biking"
+            ] }
+        },
+        "answers": [
+            { "id": "going_out_a_lot"  },
+            { "id": "going_out_quite_some"  },
+            { "id": "going_out_sometimes"  },
+            { "id": "going_out_rarely"  },
+            { "id": "going_out_never"  }
+        ]
+    }
+]
